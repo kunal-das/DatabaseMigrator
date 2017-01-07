@@ -1,7 +1,14 @@
-package multi_threading;
+package multi_threading.code_1;
 
 class DemoThread extends Thread
 {
+	/**
+	 * @author kunal
+	 * This class is a sample example of implementing concurrency
+	 * by inheriting Thread class.
+	 * @see Thread
+	 */
+
 	DemoThread(String s) {
 		super(s);
 		this.start();
