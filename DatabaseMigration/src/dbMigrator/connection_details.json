@@ -1,0 +1,18 @@
+{
+	"oracle" : {
+		"driver" : "oracle.jdbc.driver.OracleDriver",
+		"host" : "localhost",
+		"port" : "1521",
+		"schema" : "orcl",
+		"username" : "kunal",
+		"password" : "kunal"
+	},
+	"mysql" : {
+		"driver" : "oracle.jdbc.driver.OracleDriver",
+		"host" : "localhost",
+		"port" : "1521",
+		"schema" : "orcl",
+		"username" : "kunal",
+		"password" : "kunal"
+	}
+}

@@ -2,7 +2,6 @@ package dbMigrator;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
 class UserInterface {
@@ -19,6 +18,15 @@ class UserInterface {
 	UserInterface(){
 		sourceComboBox.setSelectedItem(null);
 		targetComboBox.setSelectedItem(null);
+		
+		sourceComboBox.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				 int i = ((JComboBox<String>)e.getSource()).getSelectedIndex();
+				 targetComboBox.setSelectedIndex(dataSourceList.length - i - 1);
+			}
+		});
 		panel.add(sourceLabel);
 		panel.add(sourceComboBox);
 		panel.add(targetLabel);
@@ -27,7 +35,8 @@ class UserInterface {
 		frame.add(panel);
 		
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.pack();
+		frame.setSize(400, 200);
+//		frame.pack();
 		frame.setVisible(true);
 	}
 	
